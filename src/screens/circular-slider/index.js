@@ -2,7 +2,7 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import {polar2Canvas, Vector} from 'react-native-redash';
 import {Svg, Path, Defs, Mask} from 'react-native-svg';
-import {absoluteDuration, CENTER, R, SIZE, STROKE,PI} from '../../constant.js';
+import {absoluteDuration, CENTER, R, SIZE, STROKE, PI} from '../../constant.js';
 import Cursor from '../cursor/index.js';
 import Animated, {
   useSharedValue,
@@ -21,9 +21,9 @@ const CircularSlider = ({start, end}) => {
     polar2Canvas({theta: end.value, radius: R}, CENTER),
   );
   const animatedProps = useAnimatedProps(() => {
-    console.log("start",startPos.value.x);
+    console.log('start', startPos.value.x);
 
-    const duration=absoluteDuration(start.value,end.value)
+    const duration = absoluteDuration(start.value, end.value);
     return {
       d: `M ${startPos.value.x} ${startPos.value.y} A ${R} ${R} 0 ${
         duration < PI ? '0' : '1'

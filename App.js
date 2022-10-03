@@ -1,6 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
- import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // import CreatePost from './src/screens/createPost';
 // import PostListing from './src/screens/postListing';
 // import EmployeeDetails from './src/screens/fetchData';
@@ -38,22 +38,22 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     // // <Provider store={store}>
-       <PaperProvider theme={theme}>
-        <MyStatusBar />
+    <PaperProvider theme={theme}>
+      <MyStatusBar />
 
-        <NavigationContainer>
-          <Stack.Navigator
-            //  initialRouteName="CreatePost"
-            screenOptions={{headerShown: false}}>
-            <Stack.Screen name="BedTime" component={BedTime} />
-            {/*  <Stack.Screen name="CreatePost" component={CreatePost} />
+      <NavigationContainer>
+        <Stack.Navigator
+          //  initialRouteName="CreatePost"
+          screenOptions={{headerShown: false}}>
+          <Stack.Screen name="BedTime" component={BedTime} />
+          {/*  <Stack.Screen name="CreatePost" component={CreatePost} />
             <Stack.Screen name="PostListing" component={PostListing} />
             <Stack.Screen name="EmployeeDetails" component={EmployeeDetails} />
             <Stack.Screen name="FormData" component={FormData} />
   <Stack.Screen name="Profile" component={Profile} />*/}
-          </Stack.Navigator>
-        </NavigationContainer>
-      </PaperProvider>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </PaperProvider>
     // </Provider>
   );
 }
